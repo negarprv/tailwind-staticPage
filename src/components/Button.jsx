@@ -1,10 +1,12 @@
-const Button = ({ title, hidden }) => {
+const Button = ({ title, hidden, bright }) => {
   return (
     <a
       href=""
-      className={`${
-        hidden ? "hidden md:block" : ""
-      }  p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight`}
+      className={`${hidden ? "hidden md:block" : ""}  p-3 px-6 pt-2  ${
+        bright
+          ? "bg-white text-brightRed hover:bg-gray-200"
+          : "bg-brightRed text-white hover:bg-brightRedLight"
+      }  rounded-full  shadow-2xl `}
     >
       {title}
     </a>
